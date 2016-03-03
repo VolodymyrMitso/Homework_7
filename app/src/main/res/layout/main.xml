@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:id="@+id/tb_MainToolbar_AM"
+
+        android:background="@color/colorPrimary"
+
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sh_tb"
+
+        android:id="@+id/tv_Item1Text_AM"
+
+        android:text="@string/s_text_1"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="45dp"
+
+        android:layout_below="@+id/tb_MainToolbar_AM"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/tv_Item1Title_AM"
+
+        android:text="@string/s_item_1"
+        android:textSize="17sp"
+        android:textColor="@color/colorAccentLight"
+        android:textStyle="bold"
+
+        android:layout_alignTop="@+id/tv_Item1Text_AM"
+        android:layout_marginTop="12dp"
+        android:layout_alignLeft="@+id/tv_Item1Text_AM"
+        android:layout_marginLeft="10dp"
+        android:layout_alignStart="@+id/tv_Item1Text_AM"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/ic_settings"
+
+        android:id="@+id/btn_Item1Settings_AM"
+
+        android:layout_alignBottom="@+id/tv_Item1Title_AM"
+        android:layout_alignRight="@+id/tv_Item1Text_AM"
+        android:layout_marginRight="10dp"
+        android:layout_alignEnd="@+id/tv_Item1Text_AM"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sh_tb"
+
+        android:id="@+id/tv_Item2Text_AM"
+
+        android:text="@string/s_text_2"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="45dp"
+
+        android:layout_below="@+id/tv_Item1Text_AM"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/tv_Item2Title_AM"
+
+        android:text="@string/s_item_2"
+        android:textSize="17sp"
+        android:textColor="@color/colorAccentLight"
+        android:textStyle="bold"
+
+        android:layout_alignTop="@+id/tv_Item2Text_AM"
+        android:layout_marginTop="12dp"
+        android:layout_alignLeft="@+id/tv_Item2Text_AM"
+        android:layout_marginLeft="10dp"
+        android:layout_alignStart="@+id/tv_Item2Text_AM"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/ic_settings"
+
+        android:id="@+id/btn_Item2Settings_AM"
+
+        android:layout_alignBottom="@+id/tv_Item2Title_AM"
+        android:layout_alignRight="@+id/tv_Item2Text_AM"
+        android:layout_marginRight="10dp"
+        android:layout_alignEnd="@+id/tv_Item2Text_AM"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sh_tb"
+
+        android:id="@+id/tv_Item3Text_AM"
+
+        android:text="@string/s_text_3"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="45dp"
+
+        android:layout_below="@+id/tv_Item2Text_AM"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/tv_Item3Title_AM"
+
+        android:text="@string/s_item_3"
+        android:textSize="17sp"
+        android:textColor="@color/colorAccentLight"
+        android:textStyle="bold"
+
+        android:layout_alignTop="@+id/tv_Item3Text_AM"
+        android:layout_marginTop="12dp"
+        android:layout_alignLeft="@+id/tv_Item3Text_AM"
+        android:layout_marginLeft="10dp"
+        android:layout_alignStart="@+id/tv_Item3Text_AM"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/ic_settings"
+
+        android:id="@+id/btn_Item3Settings_AM"
+
+        android:layout_alignBottom="@+id/tv_Item3Title_AM"
+        android:layout_alignRight="@+id/tv_Item3Text_AM"
+        android:layout_marginRight="10dp"
+        android:layout_alignEnd="@+id/tv_Item3Text_AM"
+        android:layout_marginEnd="10dp" />
+
+</RelativeLayout>
