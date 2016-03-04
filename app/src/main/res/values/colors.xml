@@ -4,7 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#b3174c</color>
     <color name="colorAccentLight">#eab9ca</color>
-    <color name="contentDisableColor">#aaffffff</color>
+    <color name="contentDisableColor">#50000000</color>
+
+    <color name="strokeDisable">#50303F9F</color>
+    <color name="white">#ffffff</color>
 
 
 </resources>

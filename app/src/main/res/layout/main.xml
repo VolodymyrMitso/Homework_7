@@ -7,28 +7,30 @@
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
 
         android:id="@+id/tb_MainToolbar_AM"
 
         android:background="@color/colorPrimary"
-
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:titleTextColor="@color/white"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/sh_tb"
+        android:background="@drawable/sel_sh_tv"
 
         android:id="@+id/tv_Item1Text_AM"
+        android:enabled="false"
 
         android:text="@string/s_text_1"
+        android:textColor="@color/sel_c_tv_text"
         android:textSize="12sp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:paddingTop="45dp"
+
+
 
         android:layout_below="@+id/tb_MainToolbar_AM"
         android:layout_marginTop="22dp"
@@ -59,6 +61,7 @@
         android:background="@drawable/ic_settings"
 
         android:id="@+id/btn_Item1Settings_AM"
+        android:enabled="false"
 
         android:layout_alignBottom="@+id/tv_Item1Title_AM"
         android:layout_alignRight="@+id/tv_Item1Text_AM"
@@ -69,11 +72,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/sh_tb"
+        android:background="@drawable/sel_sh_tv"
 
         android:id="@+id/tv_Item2Text_AM"
+        android:enabled="false"
 
         android:text="@string/s_text_2"
+        android:textColor="@color/sel_c_tv_text"
         android:textSize="12sp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -109,6 +114,7 @@
         android:background="@drawable/ic_settings"
 
         android:id="@+id/btn_Item2Settings_AM"
+        android:enabled="false"
 
         android:layout_alignBottom="@+id/tv_Item2Title_AM"
         android:layout_alignRight="@+id/tv_Item2Text_AM"
@@ -119,11 +125,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/sh_tb"
+        android:background="@drawable/sel_sh_tv"
 
         android:id="@+id/tv_Item3Text_AM"
+        android:enabled="false"
 
         android:text="@string/s_text_3"
+        android:textColor="@color/sel_c_tv_text"
         android:textSize="12sp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -159,6 +167,7 @@
         android:background="@drawable/ic_settings"
 
         android:id="@+id/btn_Item3Settings_AM"
+        android:enabled="false"
 
         android:layout_alignBottom="@+id/tv_Item3Title_AM"
         android:layout_alignRight="@+id/tv_Item3Text_AM"
