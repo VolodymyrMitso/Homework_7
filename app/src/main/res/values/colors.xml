@@ -8,6 +8,7 @@
 
     <color name="strokeDisable">#50303F9F</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 
 
 </resources>

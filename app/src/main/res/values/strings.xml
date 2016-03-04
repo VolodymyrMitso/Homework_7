@@ -32,4 +32,7 @@
     <string name="s_showToast">Show in Toast</string>
     <string name="s_closeApp">Close app</string>
 
+
+    <string name="s_itemScreen">Item Screen</string>
+
 </resources>

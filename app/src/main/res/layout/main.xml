@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:id="@+id/tb_MainToolbar_AM"
+        android:id="@+id/tb_Toolbar_AM"
 
         android:background="@color/colorPrimary"
         app:titleTextColor="@color/white"/>
@@ -32,7 +32,7 @@
 
 
 
-        android:layout_below="@+id/tb_MainToolbar_AM"
+        android:layout_below="@+id/tb_Toolbar_AM"
         android:layout_marginTop="22dp"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"/>

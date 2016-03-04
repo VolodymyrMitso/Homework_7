@@ -1,5 +1,6 @@
 package mitso.v.homework_7;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -13,28 +14,38 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Toolbar mToolbar_Main;
+    private TextView mTextView_Item1Title;
+    private TextView mTextView_Item2Title;
+    private TextView mTextView_Item3Title;
 
     private TextView mTextView_Item1Text;
     private TextView mTextView_Item2Text;
     private TextView mTextView_Item3Text;
+
     private Button mButton_Item1Settings;
     private Button mButton_Item2Settings;
     private Button mButton_Item3Settings;
 
     private Menu mMenu;
 
+//    private SharedPreferences mSharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        mToolbar_Main = (Toolbar) findViewById(R.id.tb_MainToolbar_AM);
-        setSupportActionBar(mToolbar_Main);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.tb_Toolbar_AM);
+        setSupportActionBar(mToolbar);
+
+        mTextView_Item1Title = (TextView) findViewById(R.id.tv_Item1Title_AM);
+        mTextView_Item2Title = (TextView) findViewById(R.id.tv_Item2Title_AM);
+        mTextView_Item3Title = (TextView) findViewById(R.id.tv_Item3Title_AM);
 
         mTextView_Item1Text = (TextView) findViewById(R.id.tv_Item1Text_AM);
         mTextView_Item2Text = (TextView) findViewById(R.id.tv_Item2Text_AM);
         mTextView_Item3Text = (TextView) findViewById(R.id.tv_Item3Text_AM);
+
         mButton_Item1Settings = (Button) findViewById(R.id.btn_Item1Settings_AM);
         mButton_Item2Settings = (Button) findViewById(R.id.btn_Item2Settings_AM);
         mButton_Item3Settings = (Button) findViewById(R.id.btn_Item3Settings_AM);
@@ -96,48 +107,77 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_Item1Settings_AM:
-                showPopupMenu(v);
+                showPopupMenu(v, mTextView_Item1Title, mTextView_Item1Text);
                 break;
             case R.id.btn_Item2Settings_AM:
-                showPopupMenu(v);
+                showPopupMenu(v, mTextView_Item2Title, mTextView_Item2Text);
                 break;
             case R.id.btn_Item3Settings_AM:
-                showPopupMenu(v);
+                showPopupMenu(v, mTextView_Item3Title, mTextView_Item3Text);
                 break;
         }
     }
 
-    private void showPopupMenu(View v) {
+    private void showPopupMenu(View v, final TextView title, final TextView text) {
         PopupMenu popupMenu = new PopupMenu(this, v);
         popupMenu.inflate(R.menu.menu_item);
-
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-
                     case R.id.mi_openWindow_MI:
-                        Toast.makeText(getApplicationContext(),
-                                "Вы выбрали PopupMenu 1",
-                                Toast.LENGTH_SHORT).show();
+                        openSecondActivity(title.getText().toString(), text.getText().toString());
                         return true;
                     case R.id.mi_showToast_MI:
-                        Toast.makeText(getApplicationContext(),
-                                "Вы выбрали PopupMenu 2",
-                                Toast.LENGTH_SHORT).show();
+                        String toastString = title.getText().toString() + "\n" + text.getText().toString();
+                        Toast.makeText(MainActivity.this, toastString, Toast.LENGTH_LONG).show();
                         return true;
                     case R.id.mi_closeApp_MI:
-                        Toast.makeText(getApplicationContext(),
-                                "Вы выбрали PopupMenu 3",
-                                Toast.LENGTH_SHORT).show();
+                        finish();
                         return true;
                     default:
                         return false;
                 }
             }
         });
-
         popupMenu.show();
+    }
+
+    private void openSecondActivity(String title, String text) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("title", title);
+        intent.putExtra("text", text);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(Constants.SAVED_ITEM_1_STATE, mTextView_Item1Text.isEnabled());
+        outState.putBoolean(Constants.SAVED_ITEM_2_STATE, mTextView_Item2Text.isEnabled());
+        outState.putBoolean(Constants.SAVED_ITEM_3_STATE, mTextView_Item3Text.isEnabled());
+        outState.putBoolean(Constants.SAVED_SETTINGS_1_STATE, mButton_Item1Settings.isEnabled());
+        outState.putBoolean(Constants.SAVED_SETTINGS_2_STATE, mButton_Item2Settings.isEnabled());
+        outState.putBoolean(Constants.SAVED_SETTINGS_3_STATE, mButton_Item3Settings.isEnabled());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mTextView_Item1Text.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_ITEM_1_STATE));
+        mTextView_Item2Text.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_ITEM_2_STATE));
+        mTextView_Item3Text.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_ITEM_3_STATE));
+
+//        if (savedInstanceState.getBoolean(Constants.SAVED_ITEM_1_STATE))
+//            mMenu.getItem(0).getSubMenu().getItem(0).setIcon(R.drawable.ic_checked);
+//        if (savedInstanceState.getBoolean(Constants.SAVED_ITEM_2_STATE))
+//            mMenu.getItem(0).getSubMenu().getItem(1).setIcon(R.drawable.ic_checked);
+//        if (savedInstanceState.getBoolean(Constants.SAVED_ITEM_3_STATE))
+//            mMenu.getItem(0).getSubMenu().getItem(2).setIcon(R.drawable.ic_checked);
+
+        mButton_Item1Settings.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_SETTINGS_1_STATE));
+        mButton_Item2Settings.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_SETTINGS_2_STATE));
+        mButton_Item3Settings.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_SETTINGS_3_STATE));
     }
 }
