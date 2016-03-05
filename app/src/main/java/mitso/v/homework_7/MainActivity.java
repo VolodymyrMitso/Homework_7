@@ -3,6 +3,7 @@ package mitso.v.homework_7;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton_Item1Settings.setOnClickListener(this);
         mButton_Item2Settings.setOnClickListener(this);
         mButton_Item3Settings.setOnClickListener(this);
+
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Homework_7</font>"));
     }
 
     @Override
@@ -57,6 +61,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (mTextView_Item1Text.isEnabled())
+            mMenu.getItem(0).getSubMenu().getItem(0).setIcon(R.drawable.ic_checked);
+        if (mTextView_Item2Text.isEnabled())
+            mMenu.getItem(0).getSubMenu().getItem(1).setIcon(R.drawable.ic_checked);
+        if (mTextView_Item3Text.isEnabled())
+            mMenu.getItem(0).getSubMenu().getItem(2).setIcon(R.drawable.ic_checked);
+
         switch (item.getItemId()) {
             case R.id.mi_Item1_MM:
                 mTextView_Item1Text.setEnabled(true);
@@ -162,14 +173,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTextView_Item1Text.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_ITEM_1_STATE));
         mTextView_Item2Text.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_ITEM_2_STATE));
         mTextView_Item3Text.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_ITEM_3_STATE));
-
-//        if (savedInstanceState.getBoolean(Constants.SAVED_ITEM_1_STATE))
-//            mMenu.getItem(0).getSubMenu().getItem(0).setIcon(R.drawable.ic_checked);
-//        if (savedInstanceState.getBoolean(Constants.SAVED_ITEM_2_STATE))
-//            mMenu.getItem(0).getSubMenu().getItem(1).setIcon(R.drawable.ic_checked);
-//        if (savedInstanceState.getBoolean(Constants.SAVED_ITEM_3_STATE))
-//            mMenu.getItem(0).getSubMenu().getItem(2).setIcon(R.drawable.ic_checked);
-
         mButton_Item1Settings.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_SETTINGS_1_STATE));
         mButton_Item2Settings.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_SETTINGS_2_STATE));
         mButton_Item3Settings.setEnabled(savedInstanceState.getBoolean(Constants.SAVED_SETTINGS_3_STATE));

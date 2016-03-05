@@ -37,7 +37,7 @@
         android:textStyle="bold"
 
         android:layout_alignTop="@+id/tv_ItemText_AS"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
         android:layout_alignLeft="@+id/tv_ItemText_AS"
         android:layout_marginLeft="15dp"
         android:layout_alignStart="@+id/tv_ItemText_AS"

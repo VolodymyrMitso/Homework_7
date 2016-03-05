@@ -2,6 +2,7 @@ package mitso.v.homework_7;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -17,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
-            getSupportActionBar().setTitle(R.string.s_itemScreen);
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Item Screen</font>"));
         }
 
         TextView mTextView_ItemTitle = (TextView) findViewById(R.id.tv_ItemTitle_AS);
