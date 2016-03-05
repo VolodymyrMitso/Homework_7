@@ -3,7 +3,6 @@ package mitso.v.homework_7;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,15 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Menu mMenu;
 
-//    private SharedPreferences mSharedPreferences;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.tb_Toolbar_AM);
-        setSupportActionBar(mToolbar);
 
         mTextView_Item1Title = (TextView) findViewById(R.id.tv_Item1Title_AM);
         mTextView_Item2Title = (TextView) findViewById(R.id.tv_Item2Title_AM);

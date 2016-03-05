@@ -2,7 +2,6 @@ package mitso.v.homework_7;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -13,14 +12,12 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second);
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.tb_Toolbar_AS);
-        if (mToolbar != null) {
-            setSupportActionBar(mToolbar);
-            getSupportActionBar().setTitle(R.string.s_itemScreen);
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
+            getSupportActionBar().setTitle(R.string.s_itemScreen);
         }
 
         TextView mTextView_ItemTitle = (TextView) findViewById(R.id.tv_ItemTitle_AS);
