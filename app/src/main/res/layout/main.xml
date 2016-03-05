@@ -39,7 +39,7 @@
 
             android:text="@string/s_item_1"
             android:textSize="17sp"
-            android:textColor="@color/colorAccentLight"
+            android:textColor="@color/sel_c_tv_title"
             android:textStyle="bold"
 
             android:layout_alignTop="@id/tv_Item1Text_AM"
@@ -99,7 +99,7 @@
 
             android:text="@string/s_item_2"
             android:textSize="17sp"
-            android:textColor="@color/colorAccentLight"
+            android:textColor="@color/sel_c_tv_title"
             android:textStyle="bold"
 
             android:layout_alignTop="@id/tv_Item2Text_AM"
@@ -159,7 +159,7 @@
 
             android:text="@string/s_item_3"
             android:textSize="17sp"
-            android:textColor="@color/colorAccentLight"
+            android:textColor="@color/sel_c_tv_title"
             android:textStyle="bold"
 
             android:layout_alignTop="@id/tv_Item3Text_AM"

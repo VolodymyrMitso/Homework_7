@@ -18,15 +18,15 @@ public class SecondActivity extends AppCompatActivity {
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
-            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Item Screen</font>"));
+            getSupportActionBar().setTitle(Html.fromHtml(Constants.AB_TITLE_AND_TITLE_COLOR_AS));
         }
 
         TextView mTextView_ItemTitle = (TextView) findViewById(R.id.tv_ItemTitle_AS);
         TextView mTextView_ItemText = (TextView) findViewById(R.id.tv_ItemText_AS);
-        String title = getIntent().getStringExtra("title");
-        String text = getIntent().getStringExtra("text");
-        mTextView_ItemTitle.setText(title);
-        mTextView_ItemText.setText(text);
+        String itemTitle = getIntent().getStringExtra(Constants.BUNDLE_ITEM_TITLE);
+        String itemText = getIntent().getStringExtra(Constants.BUNDLE_ITEM_TEXT);
+        mTextView_ItemTitle.setText(itemTitle);
+        mTextView_ItemText.setText(itemText);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

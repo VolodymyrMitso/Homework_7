@@ -1,8 +1,8 @@
 <resources>
 
     <style name="thm_AppTheme" parent="Theme.AppCompat.Light">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/c_statusBar</item>
+        <item name="colorPrimary">@color/c_actionBar</item>
     </style>
 
 </resources>

@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#b3174c</color>
-    <color name="colorAccentLight">#eab9ca</color>
-    <color name="contentDisableColor">#50000000</color>
 
-    <color name="strokeDisable">#50303F9F</color>
-    <color name="white">#ffffff</color>
-    <color name="black">#000000</color>
+    <color name="c_statusBar">#303F9F</color>
+    <color name="c_actionBar">#3F51B5</color>
 
+    <color name="c_item">#3F51B5</color>
+    <color name="c_itemTitle">#eab9ca</color>
+    <color name="c_itemText">#ffffff</color>
+
+    <color name="c_item_disabled">#ffffff</color>
+    <color name="c_itemStroke_disabled">#50303F9F</color>
+    <color name="c_itemTitle_disabled">#eab9ca</color>
+    <color name="c_itemText_disabled">#50000000</color>
+
+    <color name="c_item_opened">#ffffff</color>
+    <color name="c_itemStroke_opened">#3F51B5</color>
+    <color name="c_itemTitle_opened">#b3174c</color>
+    <color name="c_itemText_opened">#000000</color>
 
 </resources>
-
-    <!--colorPrimary		-	#3F51B5-->
-    <!--colorPrimaryDark	-	#303F9F-->
-    <!--colorAccent			-	#b3174c-->
-    <!--colorAccentLight	-	#eab9ca-->
-    <!--contentDisableColor	-	#aaffffff-->

@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton_Item3Settings.setOnClickListener(this);
 
         if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Homework_7</font>"));
+            getSupportActionBar().setTitle(Html.fromHtml(Constants.AB_TITLE_AND_TITLE_COLOR_AM));
     }
 
     @Override
@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-
         }
     }
 
@@ -123,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void showPopupMenu(View v, final TextView title, final TextView text) {
+    private void showPopupMenu(View v, final TextView itemTitle, final TextView itemText) {
         PopupMenu popupMenu = new PopupMenu(this, v);
         popupMenu.inflate(R.menu.menu_item);
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -131,10 +130,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.mi_openWindow_MI:
-                        openSecondActivity(title.getText().toString(), text.getText().toString());
+                        openSecondActivity(itemTitle.getText().toString(), itemText.getText().toString());
                         return true;
                     case R.id.mi_showToast_MI:
-                        String toastString = title.getText().toString() + "\n" + text.getText().toString();
+                        String toastString = itemTitle.getText().toString() + "\n" + itemText.getText().toString();
                         Toast.makeText(MainActivity.this, toastString, Toast.LENGTH_LONG).show();
                         return true;
                     case R.id.mi_closeApp_MI:
@@ -148,11 +147,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         popupMenu.show();
     }
 
-    private void openSecondActivity(String title, String text) {
+    private void openSecondActivity(String itemTitle, String itemText) {
         Intent intent = new Intent(this, SecondActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra("title", title);
-        intent.putExtra("text", text);
+        intent.putExtra(Constants.BUNDLE_ITEM_TITLE, itemTitle);
+        intent.putExtra(Constants.BUNDLE_ITEM_TEXT, itemText);
         startActivity(intent);
     }
 
