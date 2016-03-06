@@ -139,21 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         openSecondActivity(itemTitle.getText().toString(), itemText.getText().toString());
                         return true;
                     case R.id.mi_showToast_MI:
-                        /** Зробив так для того, щоб toast завжди було добре видно,
-                         * не змінюючи кожного разу gravity:*/
-                        String toastString = itemTitle.getText().toString() + "\n" + itemText.getText().toString();
-
-                        TextView toastView = new TextView(MainActivity.this);
-                        toastView.setBackgroundColor(getResources().getColor(R.color.c_toast));
-                        toastView.setTextColor(getResources().getColor(R.color.c_toastText));
-                        toastView.setText(toastString);
-                        int padding = getResources().getDimensionPixelSize(R.dimen.d_size_15dp);
-                        toastView.setPadding(padding, padding, padding, padding);
-
-                        Toast toast = new Toast(getApplicationContext());
-                        toast.setDuration(Toast.LENGTH_LONG);
-                        toast.setView(toastView);
-                        toast.show();
+                        showToast(itemTitle.getText().toString(), itemText.getText().toString());
                         return true;
                     case R.id.mi_closeApp_MI:
                         finish();
@@ -172,6 +158,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intent.putExtra(Constants.BUNDLE_ITEM_TITLE, itemTitle);
         intent.putExtra(Constants.BUNDLE_ITEM_TEXT, itemText);
         startActivity(intent);
+    }
+
+    private void showToast(String itemTitle, String itemText) {
+        /** Зробив так для того, щоб toast завжди було добре видно,
+         * не змінюючи кожного разу gravity:*/
+        String toastString = itemTitle + "\n" + itemText;
+
+        TextView toastView = new TextView(MainActivity.this);
+        toastView.setBackgroundColor(getResources().getColor(R.color.c_toast));
+        toastView.setTextColor(getResources().getColor(R.color.c_toastText));
+        toastView.setText(toastString);
+        int padding = getResources().getDimensionPixelSize(R.dimen.d_size_15dp);
+        toastView.setPadding(padding, padding, padding, padding);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastView);
+        toast.show();
     }
 
     @Override
