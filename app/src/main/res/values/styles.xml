@@ -5,4 +5,38 @@
         <item name="colorPrimary">@color/c_actionBar</item>
     </style>
 
+    <style name="stl_itemText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/sel_sh_tv_item</item>
+
+        <item name="android:enabled">false</item>
+
+        <item name="android:textColor">@color/sel_c_tv_item_text</item>
+        <item name="android:textSize">@dimen/d_textSize_12sp</item>
+        <item name="android:paddingTop">@dimen/d_size_45dp</item>
+        <item name="android:paddingBottom">@dimen/d_size_10dp</item>
+        <item name="android:paddingLeft">@dimen/d_size_10dp</item>
+        <item name="android:paddingRight">@dimen/d_size_10dp</item>
+    </style>
+
+    <style name="stl_itemTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:textSize">@dimen/d_textSize_17sp</item>
+        <item name="android:textColor">@color/sel_c_tv_item_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="stl_itemSettings">
+        <item name="android:layout_width">@dimen/d_size_24dp</item>
+        <item name="android:layout_height">@dimen/d_size_24dp</item>
+        <item name="android:background">@drawable/ic_settings</item>
+
+        <item name="android:state_enabled">false</item>
+    </style>
+
 </resources>
+
+

@@ -2,7 +2,9 @@
 <resources>
 
     <color name="c_statusBar">#303F9F</color>
+
     <color name="c_actionBar">#3F51B5</color>
+    <color name="c_actionBarTitle">#ffffff</color>
 
     <color name="c_item">#3F51B5</color>
     <color name="c_itemTitle">#eab9ca</color>
@@ -17,5 +19,8 @@
     <color name="c_itemStroke_opened">#3F51B5</color>
     <color name="c_itemTitle_opened">#b3174c</color>
     <color name="c_itemText_opened">#000000</color>
+
+    <color name="c_toast">#000000</color>
+    <color name="c_toastText">#ffffff</color>
 
 </resources>

@@ -48,8 +48,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton_Item2Settings.setOnClickListener(this);
         mButton_Item3Settings.setOnClickListener(this);
 
-        if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle(Html.fromHtml(Constants.AB_TITLE_AND_TITLE_COLOR_AM));
+        /** Зробив так для того, щоб можна було змінювати actionBarTitle
+         * і actionBarTitleColor прямо з ресурсів:*/
+        if (getSupportActionBar() != null) {
+            String actionBarTitle = getResources().getString(R.string.s_actionBarTitle_AM);
+            String actionBarTitleColor = "#" + getResources().getString(R.color.c_actionBarTitle).substring(2);
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='"
+                    + actionBarTitleColor + "'>" + actionBarTitle + "</font>"));
+        }
     }
 
     @Override
@@ -124,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showPopupMenu(View v, final TextView itemTitle, final TextView itemText) {
         PopupMenu popupMenu = new PopupMenu(this, v);
-        popupMenu.inflate(R.menu.menu_item);
+        popupMenu.inflate(R.menu.menu_items);
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -133,8 +139,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         openSecondActivity(itemTitle.getText().toString(), itemText.getText().toString());
                         return true;
                     case R.id.mi_showToast_MI:
+                        /** Зробив так для того, щоб toast завжди було добре видно,
+                         * не змінюючи кожного разу gravity:*/
                         String toastString = itemTitle.getText().toString() + "\n" + itemText.getText().toString();
-                        Toast.makeText(MainActivity.this, toastString, Toast.LENGTH_LONG).show();
+
+                        TextView toastView = new TextView(MainActivity.this);
+                        toastView.setBackgroundColor(getResources().getColor(R.color.c_toast));
+                        toastView.setTextColor(getResources().getColor(R.color.c_toastText));
+                        toastView.setText(toastString);
+                        int padding = getResources().getDimensionPixelSize(R.dimen.d_size_15dp);
+                        toastView.setPadding(padding, padding, padding, padding);
+
+                        Toast toast = new Toast(getApplicationContext());
+                        toast.setDuration(Toast.LENGTH_LONG);
+                        toast.setView(toastView);
+                        toast.show();
                         return true;
                     case R.id.mi_closeApp_MI:
                         finish();

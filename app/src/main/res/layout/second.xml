@@ -7,23 +7,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/sh_tv_opened"
+        android:background="@drawable/sh_tv_item_opened"
 
         android:id="@+id/tv_ItemText_AS"
 
-        android:text="@string/s_text_3"
-
-        android:textSize="17sp"
+        android:textSize="@dimen/d_textSize_17sp"
         android:textColor="@color/c_itemText_opened"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="15dp"
-        android:paddingTop="60dp"
+        android:paddingLeft="@dimen/d_size_15dp"
+        android:paddingRight="@dimen/d_size_15dp"
+        android:paddingBottom="@dimen/d_size_15dp"
+        android:paddingTop="@dimen/d_size_60dp"
 
-        android:layout_marginTop="22dp"
-        android:layout_marginBottom="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginRight="22dp"/>
+        android:layout_marginTop="@dimen/d_size_22dp"
+        android:layout_marginBottom="@dimen/d_size_22dp"
+        android:layout_marginLeft="@dimen/d_size_22dp"
+        android:layout_marginRight="@dimen/d_size_22dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,16 +29,15 @@
 
         android:id="@+id/tv_ItemTitle_AS"
 
-        android:text="@string/s_item_1"
-        android:textSize="21sp"
+        android:textSize="@dimen/d_textSize_21sp"
         android:textColor="@color/c_itemTitle_opened"
         android:textStyle="bold"
 
         android:layout_alignTop="@+id/tv_ItemText_AS"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="@dimen/d_size_18dp"
         android:layout_alignLeft="@+id/tv_ItemText_AS"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="@dimen/d_size_15dp"
         android:layout_alignStart="@+id/tv_ItemText_AS"
-        android:layout_marginStart="15dp" />
+        android:layout_marginStart="@dimen/d_size_15dp" />
 
 </RelativeLayout>

@@ -2,11 +2,14 @@
 
     <string name="s_appName">Homework_7</string>
 
-    <string name="s_item_1">Item #1</string>
-    <string name="s_item_2">Item #2</string>
-    <string name="s_item_3">Item #3</string>
+    <string name="s_actionBarTitle_AM">Homework_7</string>
+    <string name="s_actionBarTitle_AS">Item Screen</string>
 
-    <string name="s_text_1">
+    <string name="s_item1Title">Item #1</string>
+    <string name="s_item2Title">Item #2</string>
+    <string name="s_item3Title">Item #3</string>
+
+    <string name="s_item1Text">
         The Command Palette holds infrequently used functionality,
         like sorting, changing the syntax and changing the indentation
         settings. With just a few keystrokes, you can search for what you
@@ -14,14 +17,14 @@
         obscure key bindings.
     </string>
 
-    <string name="s_text_2">
+    <string name="s_item2Text">
         When you need to focus, Distraction Free Mode is there to help you out.
         Distraction Free Mode is full screen, chrome free editing, with nothing
         but your text in the center of the screen. You can incrementally show
         elements of the UI, such as tabs and the find panel, as you need them.
     </string>
 
-    <string name="s_text_3">
+    <string name="s_item3Text">
         Projects in Sublime Text capture the full contents of the workspace,
         including modified and unsaved files. You can switch between projects
         in a manner similar to Goto Anything, and the switch is instant, with
@@ -32,8 +35,5 @@
     <string name="s_openWindow">Open in new window</string>
     <string name="s_showToast">Show in Toast</string>
     <string name="s_closeApp">Close app</string>
-
-
-    <string name="s_itemScreen">Item Screen</string>
 
 </resources>

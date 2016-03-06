@@ -2,9 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_enabled="true"
-        android:drawable="@drawable/sh_tv"/>
+        android:drawable="@drawable/sh_tv_item"/>
 
     <item android:state_enabled="false"
-        android:drawable="@drawable/sh_tv_disabled"/>
+        android:drawable="@drawable/sh_tv_item_disabled"/>
 
 </selector>

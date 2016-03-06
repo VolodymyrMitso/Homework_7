@@ -11,57 +11,44 @@
         android:layout_weight="1">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/sel_sh_tv"
+            style="@style/stl_itemText"
+
+            android:background="@drawable/sel_sh_tv_item"
 
             android:id="@+id/tv_Item1Text_AM"
-            android:enabled="false"
 
-            android:text="@string/s_text_1"
-            android:textColor="@color/sel_c_tv_text"
-            android:textSize="12sp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="50dp"
+            android:text="@string/s_item1Text"
+            android:textColor="@color/sel_c_tv_item_text"
+            android:paddingTop="@dimen/d_size_50dp"
 
-            android:layout_marginTop="22dp"
-            android:layout_marginBottom="22dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="11dp" />
+            android:layout_marginTop="@dimen/d_size_22dp"
+            android:layout_marginBottom="@dimen/d_size_22dp"
+            android:layout_marginLeft="@dimen/d_size_22dp"
+            android:layout_marginRight="@dimen/d_size_11dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/stl_itemTitle"
 
             android:id="@+id/tv_Item1Title_AM"
+            android:text="@string/s_item1Title"
 
-            android:text="@string/s_item_1"
-            android:textSize="17sp"
-            android:textColor="@color/sel_c_tv_title"
-            android:textStyle="bold"
-
-            android:layout_alignTop="@+id/tv_Item1Text_AM"
-            android:layout_marginTop="12dp"
-            android:layout_alignLeft="@+id/tv_Item1Text_AM"
-            android:layout_marginLeft="10dp"
-            android:layout_alignStart="@+id/tv_Item1Text_AM"
-            android:layout_marginStart="10dp" />
+            android:layout_alignTop="@id/tv_Item1Text_AM"
+            android:layout_marginTop="@dimen/d_size_12dp"
+            android:layout_alignLeft="@id/tv_Item1Text_AM"
+            android:layout_marginLeft="@dimen/d_size_10dp"
+            android:layout_alignStart="@id/tv_Item1Text_AM"
+            android:layout_marginStart="@dimen/d_size_10dp" />
 
         <Button
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:background="@drawable/ic_settings"
+            style="@style/stl_itemSettings"
 
             android:id="@+id/btn_Item1Settings_AM"
-            android:enabled="false"
 
-            android:layout_alignBottom="@+id/tv_Item1Title_AM"
-            android:layout_alignRight="@+id/tv_Item1Text_AM"
-            android:layout_marginRight="10dp"
-            android:layout_alignEnd="@+id/tv_Item1Text_AM"
-            android:layout_marginEnd="10dp" />
+            android:layout_alignBottom="@id/tv_Item1Title_AM"
+            android:layout_alignRight="@id/tv_Item1Text_AM"
+            android:layout_marginRight="@dimen/d_size_10dp"
+            android:layout_alignEnd="@id/tv_Item1Text_AM"
+            android:layout_marginEnd="@dimen/d_size_10dp" />
 
     </RelativeLayout>
 
@@ -71,57 +58,44 @@
         android:layout_weight="1">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/sel_sh_tv"
+            style="@style/stl_itemText"
+
+            android:background="@drawable/sel_sh_tv_item"
 
             android:id="@+id/tv_Item2Text_AM"
-            android:enabled="false"
 
-            android:text="@string/s_text_2"
-            android:textColor="@color/sel_c_tv_text"
-            android:textSize="12sp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="50dp"
+            android:text="@string/s_item2Text"
+            android:textColor="@color/sel_c_tv_item_text"
+            android:paddingTop="@dimen/d_size_50dp"
 
-            android:layout_marginTop="22dp"
-            android:layout_marginBottom="22dp"
-            android:layout_marginLeft="11dp"
-            android:layout_marginRight="11dp" />
+            android:layout_marginTop="@dimen/d_size_22dp"
+            android:layout_marginBottom="@dimen/d_size_22dp"
+            android:layout_marginLeft="@dimen/d_size_11dp"
+            android:layout_marginRight="@dimen/d_size_11dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/stl_itemTitle"
 
             android:id="@+id/tv_Item2Title_AM"
+            android:text="@string/s_item2Title"
 
-            android:text="@string/s_item_2"
-            android:textSize="17sp"
-            android:textColor="@color/sel_c_tv_title"
-            android:textStyle="bold"
-
-            android:layout_alignTop="@+id/tv_Item2Text_AM"
-            android:layout_marginTop="12dp"
-            android:layout_alignLeft="@+id/tv_Item2Text_AM"
-            android:layout_marginLeft="10dp"
-            android:layout_alignStart="@+id/tv_Item2Text_AM"
-            android:layout_marginStart="10dp" />
+            android:layout_alignTop="@id/tv_Item2Text_AM"
+            android:layout_marginTop="@dimen/d_size_12dp"
+            android:layout_alignLeft="@id/tv_Item2Text_AM"
+            android:layout_marginLeft="@dimen/d_size_10dp"
+            android:layout_alignStart="@id/tv_Item2Text_AM"
+            android:layout_marginStart="@dimen/d_size_10dp" />
 
         <Button
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:background="@drawable/ic_settings"
+            style="@style/stl_itemSettings"
 
             android:id="@+id/btn_Item2Settings_AM"
-            android:enabled="false"
 
-            android:layout_alignBottom="@+id/tv_Item2Title_AM"
-            android:layout_alignRight="@+id/tv_Item2Text_AM"
-            android:layout_marginRight="10dp"
-            android:layout_alignEnd="@+id/tv_Item2Text_AM"
-            android:layout_marginEnd="10dp" />
+            android:layout_alignBottom="@id/tv_Item2Title_AM"
+            android:layout_alignRight="@id/tv_Item2Text_AM"
+            android:layout_marginRight="@dimen/d_size_10dp"
+            android:layout_alignEnd="@id/tv_Item2Text_AM"
+            android:layout_marginEnd="@dimen/d_size_10dp" />
 
     </RelativeLayout>
 
@@ -131,57 +105,44 @@
         android:layout_weight="1">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/sel_sh_tv"
+            style="@style/stl_itemText"
+
+            android:background="@drawable/sel_sh_tv_item"
 
             android:id="@+id/tv_Item3Text_AM"
-            android:enabled="false"
 
-            android:text="@string/s_text_3"
-            android:textColor="@color/sel_c_tv_text"
-            android:textSize="12sp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="50dp"
+            android:text="@string/s_item3Text"
+            android:textColor="@color/sel_c_tv_item_text"
+            android:paddingTop="@dimen/d_size_50dp"
 
-            android:layout_marginTop="22dp"
-            android:layout_marginBottom="22dp"
-            android:layout_marginLeft="11dp"
-            android:layout_marginRight="22dp" />
+            android:layout_marginTop="@dimen/d_size_22dp"
+            android:layout_marginBottom="@dimen/d_size_22dp"
+            android:layout_marginLeft="@dimen/d_size_11dp"
+            android:layout_marginRight="@dimen/d_size_22dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/stl_itemTitle"
 
             android:id="@+id/tv_Item3Title_AM"
+            android:text="@string/s_item3Title"
 
-            android:text="@string/s_item_3"
-            android:textSize="17sp"
-            android:textColor="@color/sel_c_tv_title"
-            android:textStyle="bold"
-
-            android:layout_alignTop="@+id/tv_Item3Text_AM"
-            android:layout_marginTop="12dp"
-            android:layout_alignLeft="@+id/tv_Item3Text_AM"
-            android:layout_marginLeft="10dp"
-            android:layout_alignStart="@+id/tv_Item3Text_AM"
-            android:layout_marginStart="10dp" />
+            android:layout_alignTop="@id/tv_Item3Text_AM"
+            android:layout_marginTop="@dimen/d_size_12dp"
+            android:layout_alignLeft="@id/tv_Item3Text_AM"
+            android:layout_marginLeft="@dimen/d_size_10dp"
+            android:layout_alignStart="@id/tv_Item3Text_AM"
+            android:layout_marginStart="@dimen/d_size_10dp" />
 
         <Button
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:background="@drawable/ic_settings"
+            style="@style/stl_itemSettings"
 
             android:id="@+id/btn_Item3Settings_AM"
-            android:enabled="false"
 
-            android:layout_alignBottom="@+id/tv_Item3Title_AM"
-            android:layout_alignRight="@+id/tv_Item3Text_AM"
-            android:layout_marginRight="10dp"
-            android:layout_alignEnd="@+id/tv_Item3Text_AM"
-            android:layout_marginEnd="10dp" />
+            android:layout_alignBottom="@id/tv_Item3Title_AM"
+            android:layout_alignRight="@id/tv_Item3Text_AM"
+            android:layout_marginRight="@dimen/d_size_10dp"
+            android:layout_alignEnd="@id/tv_Item3Text_AM"
+            android:layout_marginEnd="@dimen/d_size_10dp" />
 
     </RelativeLayout>
 

@@ -18,7 +18,11 @@ public class SecondActivity extends AppCompatActivity {
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
-            getSupportActionBar().setTitle(Html.fromHtml(Constants.AB_TITLE_AND_TITLE_COLOR_AS));
+
+            String actionBarTitle = getResources().getString(R.string.s_actionBarTitle_AS);
+            String actionBarTitleColor = "#" + getResources().getString(R.color.c_actionBarTitle).substring(2);
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='"
+                    + actionBarTitleColor + "'>" + actionBarTitle + "</font>"));
         }
 
         TextView mTextView_ItemTitle = (TextView) findViewById(R.id.tv_ItemTitle_AS);
